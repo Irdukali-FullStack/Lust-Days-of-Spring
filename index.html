@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Последние дни весны | Официальный сайт</title>
+    <link rel="stylesheet" href="../Last Days of Spring/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ДОБАВЬТЕ ЭТИ СТИЛИ В ВАШ CSS */
+        .track-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .track-list li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            gap: 15px;
+        }
+
+        .track-number {
+            min-width: 30px;
+            font-weight: bold;
+            color: #666;
+            text-align: center;
+        }
+
+        .track-name {
+            flex-grow: 1;
+            margin: 0 10px;
+        }
+
+        .track-duration {
+            min-width: 50px;
+            text-align: right;
+            color: #666;
+        }
+
+        .track-action {
+            min-width: 100px;
+            text-align: right;
+        }
+
+        .btn-sm {
+            padding: 8px 16px;
+            background: #8e0404;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            white-space: nowrap;
+            transition: background 0.3s;
+        }
+
+        .btn-sm:hover {
+            background: #77020278;
+        }
+
+        /* Скрываем аудио элементы */
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка -->
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">ПОСЛЕДНИЕ ДНИ ВЕСНЫ</div>
+                <nav>
+                    <ul>
+                        <li><a href="#album">Альбом</a></li>
+                        <li><a href="#social">Соцсети</a></li>
+                        <li><a href="#merch">Мерч</a></li>
+                        <li><a href="#" class="btn">Слушать</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Главная секция -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Забвение ранней любви</h1>
+            <p>Новый альбом, погружающий в атмосферу последних дней весны</p>
+            <a href="#album" class="btn">Открыть альбом</a>
+        </div>
+    </section>
+    
+    <!-- Альбом -->
+    <section class="album" id="album">
+        <div class="container">
+            <h2 class="section-title">НОВЫЙ АЛЬБОМ</h2>
+            <div class="album-content">
+                <div class="album-cover">
+                    <div class="album-cover-inner">
+                        <div class="album-cover-img">
+                            <div class="album-cover-text">
+                                Забвение ранней любви
+                                <span>ПОСЛЕДНИЕ ДНИ ВЕСНЫ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="album-info" id="albumInfo">
+                    <h3>Забвение ранней любви</h3>
+                    <p>Альбом, выпущенный в 2025 году, содержит 8 треков, отражающих настроение первых подростковых чувтсв.</p>
+                    
+                    <!-- ИСПРАВЛЕННЫЙ СПИСОК ТРЕКОВ -->
+                    <ul class="track-list">
+                        <li>
+                            <span class="track-number">1</span>
+                            <span class="track-name">Начало</span>
+                            <span class="track-duration">2:54</span>
+                            <div class="track-action">
+                                <button class="btn-sm" onclick="toggleMusic('audio1', this)">
+                                    ▶ Слушать
+                                </button>
+                            </div>
+                            <audio id="audio1" src="../Last Days of Spring/audio/Intro.wav" preload="metadata"></audio>
+                        </li>
+                        <li>
+                            <span class="track-number">2</span>
+                            <span class="track-name">Память о тебе</span>
+                            <span class="track-duration">2:12</span>
+                            <div class="track-action">
+                                <button class="btn-sm" onclick="toggleMusic('audio2', this)">
+                                    ▶ Слушать
+                                </button>
+                            </div>
+                            <audio id="audio2" src="../Last Days of Spring/audio/Память о тебе.wav" preload="metadata"></audio>
+                        </li>
+                        <li>
+                            <span class="track-number">3</span>
+                            <span class="track-name">Дождь</span>
+                            <span class="track-duration">3:11</span>
+                            <div class="track-action">
+                                <button class="btn-sm" onclick="toggleMusic('audio3', this)">
+                                    ▶ Слушать
+                                </button>
+                            </div>
+                            <audio id="audio3" src="../Last Days of Spring/audio/Миша - Дождь FINAL MASTERING.mp3" preload="metadata"></audio>
+                        </li>
+                        <li>
+                            <span class="track-number">4</span>
+                            <span class="track-name">Фальшивые чувства</span>
+                            <span class="track-duration">3:21</span>
+                            <div class="track-action">
+                                <button class="btn-sm" onclick="toggleMusic('audio4', this)">
+                                    ▶ Слушать
+                                </button>
+                            </div>
+                            <audio id="audio4" src="../Last Days of Spring/audio/MISHA - TREK 2 FINISHED.mp3" preload="metadata"></audio>
+                        </li>
+                        <li>
+                            <span class="track-number">5</span>
+                            <span class="track-name">Раны от любви</span>
+                            <span class="track-duration">3:58</span>
+                            <div class="track-action">
+                                <button class="btn-sm" onclick="toggleMusic('audio5', this)">
+                                    ▶ Слушать
+                                </button>
+                            </div>
+                            <audio id="audio5" src="../Last Days of Spring/audio/Раны от любви.wav" preload="metadata"></audio>
+                        </li>
+                        <li>
+                            <span class="track-number">6</span>
+                            <span class="track-name">Не больно</span>
+                            <span class="track-duration">2:38</span>
+                            <div class="track-action">
+                                <button class="btn-sm" onclick="toggleMusic('audio6', this)">
+                                    ▶ Слушать
+                                </button>
+                            </div>
+                            <audio id="audio6" src="../Last Days of Spring/audio/FINAL Не больно.wav" preload="metadata"></audio>
+                        </li>
+                        <li>
+                            <span class="track-number">7</span>
+                            <span class="track-name">Последние дни весны</span>
+                            <span class="track-duration">4:26</span>
+                            <div class="track-action">
+                                <button class="btn-sm" onclick="toggleMusic('audio7', this)">
+                                    ▶ Слушать
+                                </button>
+                            </div>
+                            <audio id="audio7" src="../Last Days of Spring/audio/FINAL ПОСЛЕДНИЕ ДИН ВЕСНЫ111.wav" preload="metadata"></audio>
+                        </li>
+                        <li>
+                            <span class="track-number">8</span>
+                            <span class="track-name">Последний танец</span>
+                            <span class="track-duration">1:31</span>
+                            <div class="track-action">
+                                <button class="btn-sm" onclick="toggleMusic('audio8', this)">
+                                    ▶ Слушать
+                                </button>
+                            </div>
+                            <audio id="audio8" src="../Last Days of Spring/audio/Последний танец.wav" preload="metadata"></audio>
+                        </li>
+                    </ul>
+                    
+                    <a href="#" class="btn" style="margin-top:20px;">Слушать на всех площадках</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Соцсети -->
+    <section class="social" id="social">
+        <div class="container">
+            <h2 class="section-title">МЫ В СОЦСЕТЯХ</h2>
+            <div class="social-links">
+                <a href="https://www.youtube.com/@LekeFalStudio/featured" class="social-link" id="social1">
+                    <div class="social-icon"><i class="fab fa-youtube"></i></div>
+                    <span>YouTube</span>
+                </a>
+                <a href="https://vk.com/artist/posledniednivesny" class="social-link" id="social2">
+                    <div class="social-icon"><i class="fab fa-vk"></i></div>
+                    <span>VKontakte</span>
+                </a>
+                <a href="https://t.me/LekeFall" class="social-link" id="social3">
+                    <div class="social-icon"><i class="fab fa-telegram"></i></div>
+                    <span>Telegram</span>
+                </a>
+                <a href="#" class="social-link" id="social4">
+                    <div class="social-icon"><i class="fab fa-spotify"></i></div>
+                    <span>Spotify</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">ПОСЛЕДНИЕ ДНИ ВЕСНЫ</div>
+                <div class="footer-links">
+                    <a href="#">О группе</a>
+                    <a href="#">Контакты</a>
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Публичная оферта</a>
+                </div>
+                <div class="copyright">© 2025 Последние дни весны. Все права защищены.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentAudio = null;
+        let currentButton = null;
+
+        function toggleMusic(audioId, buttonElement) {
+            const audio = document.getElementById(audioId);
+            
+            // Если нажали на ту же кнопку - пауза/продолжение
+            if (currentAudio === audio && !audio.paused) {
+                audio.pause();
+                buttonElement.innerHTML = '▶ Слушать';
+                currentAudio = null;
+                currentButton = null;
+                return;
+            }
+            
+            // Останавливаем предыдущий трек
+            if (currentAudio && currentAudio !== audio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+                if (currentButton) {
+                    currentButton.innerHTML = '▶ Слушать';
+                }
+            }
+            
+            // Воспроизводим новый трек
+            audio.play().then(() => {
+                buttonElement.innerHTML = '⏸ Пауза';
+                currentAudio = audio;
+                currentButton = buttonElement;
+            }).catch(error => {
+                console.log('Ошибка воспроизведения:', error);
+            });
+        }
+
+        // Автоматическое обновление кнопок при окончании трека
+        document.addEventListener('DOMContentLoaded', function() {
+            const audioElements = document.querySelectorAll('audio');
+            audioElements.forEach(audio => {
+                audio.addEventListener('ended', function() {
+                    if (currentButton) {
+                        currentButton.innerHTML = '▶ Слушать';
+                        currentAudio = null;
+                        currentButton = null;
+                    }
+                });
+                
+                audio.addEventListener('pause', function() {
+                    if (currentButton && currentAudio === audio) {
+                        currentButton.innerHTML = '▶ Слушать';
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="../Last Days of Spring/script.js"></script>
+</body>
+</html>
